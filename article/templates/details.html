@@ -11,7 +11,6 @@
     <h2>{{ article.title }}</h2>
     <hr class="major" />
 	{{ article.body | safe }}
-    <h4>Views: {% get_hit_count for article %}</h4>
 </section>
 {% endblock %}
 
