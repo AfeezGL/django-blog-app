@@ -10,7 +10,7 @@ from autoslug import AutoSlugField
 class Article(models.Model, HitCountMixin):
     image = models.ImageField(blank = True, null = True)
     title = models.CharField(max_length = 350)
-    body = RichTextUploadingField(null = True, blank = True)
+    body = models.TextField(null = True, blank = True)
     slug = AutoSlugField(populate_from='title')
     pub_date = models.DateTimeField(auto_now = True)
     hit_count_generic = GenericRelation(
