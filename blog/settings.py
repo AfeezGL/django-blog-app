@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'storages',
     'ckeditor',
     'ckeditor_uploader',
-    'hitcount',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +141,6 @@ MEDIA_URL = '/media/'
 # ckeditor settings
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-HITCOUNT_HITS_PER_IP_LIMIT = 0
 
 
 # Amazon S3 Bucket Details
