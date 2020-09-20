@@ -15,7 +15,6 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Article.objects.order_by('-pub_date')
 
-class DetailView(HitCountDetailView):
+class DetailView(DetailView):
     model = Article
     template_name = "details.html"
-    count_hit = True 
