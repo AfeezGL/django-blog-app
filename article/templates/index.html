@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body %}
+<section>
+    <header class="major">
+        <h2>Ipsum sed dolor</h2>
+    </header>
+    <div class="posts">
+        {% for article in object_list %}
+        <article>
+            <a href="{% url 'details' article.slug %}" class="image"><img src="{{ article.image.url}}" alt="" /></a>
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.short }}...</p>
+            <ul class="actions">
+                <li><a href="{% url 'details' article.slug %}" class="button">More</a></li>
+            </ul>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% if is_paginated %}
+<section>
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="button">Next</a></li>
+        {% else %}
+        <li><span class="button disabled">Prev</span></li>
+        {% endif %}
+        {% for i in paginator.page_range %}
+        {% if page_obj.number == i %}
+        <li><a href="?page={{ i }}" class="page active">{{ i }}</a></li>
+        {% else %}
+        <li><a href="?page={{ i }}" class="page">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="button">Next</a></li>
+        {% else %}
+        <li><span class="button disabled">Next</span></li>
+        {% endif %}
+    </ul>
+</section>
+{% endif %}
+{% endblock %}

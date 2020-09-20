@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load hitcount_tags %}
+
+{% block body %}
+<section>
+	<header class="main">
+		<h1>Article</h1>
+	</header>
+
+	<span class="image main"><img src="{{ article.image.url }}" alt="" /></span>
+    <h2>{{ article.title }}</h2>
+    <hr class="major" />
+	{{ article.body | safe }}
+    <h4>Views: {% get_hit_count for article %}</h4>
+</section>
+{% endblock %}
+
