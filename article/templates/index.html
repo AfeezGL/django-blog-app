@@ -9,7 +9,7 @@
         <article>
             <a href="{% url 'details' article.slug %}" class="image"><img src="{{ article.image.url}}" alt="" /></a>
             <h3>{{ article.title }}</h3>
-            <p>{{ article.short }}...</p>
+            <p>{{ article.short_text }}...</p>
             <ul class="actions">
                 <li><a href="{% url 'details' article.slug %}" class="button">More</a></li>
             </ul>
