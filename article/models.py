@@ -3,7 +3,7 @@ from autoslug import AutoSlugField
 
 class Article(models.Model):
     image = models.ImageField()
-    title = models.CharField(max_length = 400)
+    title = models.CharField(max_length = 350)
     body = models.TextField()
     pub_date = models.DateTimeField(auto_now = True)
     update_date = models.DateTimeField(auto_now_add = True)
