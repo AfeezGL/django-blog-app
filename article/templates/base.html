@@ -10,6 +10,7 @@
         <title>Django blog</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
         <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
     </head>
     <body class="is-preload">
@@ -27,8 +28,7 @@
                                     <ul class="icons">
                                         <li><a href="https://twitter.com/AfeezGL" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                                         <li><a href="https://web.facebook.com/lawal.afeez.758" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                        <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-                                        <li><a href="htps://instagram.com/afeezgl" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="https://instagram.com/afeezgl" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                                     </ul>
                                 </header>
 
@@ -45,7 +45,7 @@
 
                             <!-- Search -->
                                 <section id="search" class="alt">
-                                    <form method="post" action="#">
+                                    <form method="get" action="/search">
                                         <input type="text" name="query" id="query" placeholder="Search" />
                                     </form>
                                 </section>
@@ -58,31 +58,6 @@
                                     <ul>
                                         <li><a href="{% url 'index' %}">Homepage</a></li>
                                         <li><a href="admin/">Admin</a></li>
-                                        <li><a href="generic.html">Generic</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
-                                        <li>
-                                            <span class="opener">Submenu</span>
-                                            <ul>
-                                                <li><a href="#">Lorem Dolor</a></li>
-                                                <li><a href="#">Ipsum Adipiscing</a></li>
-                                                <li><a href="#">Tempus Magna</a></li>
-                                                <li><a href="#">Feugiat Veroeros</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Etiam Dolore</a></li>
-                                        <li><a href="#">Adipiscing</a></li>
-                                        <li>
-                                            <span class="opener">Another Submenu</span>
-                                            <ul>
-                                                <li><a href="#">Lorem Dolor</a></li>
-                                                <li><a href="#">Ipsum Adipiscing</a></li>
-                                                <li><a href="#">Tempus Magna</a></li>
-                                                <li><a href="#">Feugiat Veroeros</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Maximus Erat</a></li>
-                                        <li><a href="#">Sapien Mauris</a></li>
-                                        <li><a href="#">Amet Lacinia</a></li>
                                     </ul>
                                 </nav>
 
