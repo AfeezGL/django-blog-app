@@ -1,8 +1,11 @@
 # Django blog
 Just a simple blog app with crud functionalities created with django backend
 
-### Frontend
-No framework was used in the frontend, jus the normal jinja templating system mixed with an HTML5 UP template
+### Stack
+- Backend - Python/Django
+- Frontend - Jinja templating system implementation of [Editorial](https://html5up.net/editorial) HTML5 UP template.
 
-### Template
-The HTML5 UP template used is called Editotial (https://html5up.net/editorial).
+### Deployment
+- Hosting - Heroku
+- Staticfiles + Images - AWS S3
+- url - [Django blog](https://prj-django-blog.herokuapp.com/)
