@@ -11,5 +11,6 @@ router.register(r'articles', views.ArticlesViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('articles/<int:pk>', views.ArticleDetail.as_view()),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('login', views.LoginApiView.as_view(), name = 'api login'),
 ]
