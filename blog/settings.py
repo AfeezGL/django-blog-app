@@ -26,28 +26,6 @@ SECRET_KEY = 'h3cb$3r5d0d%d2*(e6%$q*9=2g#712*2g3sen^_9y)0!r_vd^u'
 DEBUG = True
 
 ALLOWED_HOSTS = ['prj-django-blog.herokuapp.com', '127.0.0.1',]
-CORS_ALLOWED_ORIGINS = [
-    "https://afeezgl.github.io"
-]
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-]
 
 
 # Application definition
@@ -171,3 +149,27 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_FILE_OVERWRITE = True
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://afeezgl.github.io"
+]
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
