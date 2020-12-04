@@ -12,7 +12,7 @@ class ArticlesViewSet(viewsets.ModelViewSet):
     """
     queryset = Article.objects.all().order_by('-update_date')
     serializer_class = ArticleSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticated, permissions.IsAuthenticatedOrReadOnly]
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
     """
