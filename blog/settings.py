@@ -26,7 +26,7 @@ SECRET_KEY = 'h3cb$3r5d0d%d2*(e6%$q*9=2g#712*2g3sen^_9y)0!r_vd^u'
 DEBUG = True
 
 ALLOWED_HOSTS = ['prj-django-blog.herokuapp.com', '127.0.0.1',]
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -159,4 +159,3 @@ AWS_S3_FILE_OVERWRITE = True
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 """
-CORS_ALLOW_ALL_ORIGINS = True
