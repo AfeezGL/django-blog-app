@@ -12,15 +12,8 @@ class ArticlesViewSet(viewsets.ModelViewSet):
     """
     queryset = Article.objects.all().order_by('-update_date')
     serializer_class = ArticleSerializer
-    permission_classes = [permissions.IsAuthenticated, permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    API endpoint for updating and deleting Articles
-    """
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
-    permission_classes = [permissions.DjangoModelPermissionsOrAnonReadOnly]
 
 class LoginApiView(generics.GenericAPIView):
     """
