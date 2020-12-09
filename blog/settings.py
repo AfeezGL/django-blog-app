@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['prj-django-blog.herokuapp.com', '127.0.0.1',]
 CORS_ALLOWED_ORIGINS = [
-    'https://afeezgl.github.io',
-    'http://127.0.0.1',
+    'afeezgl.github.io',
+    '127.0.0.1',
 ]
 
 # Application definition
