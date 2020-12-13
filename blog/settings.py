@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['prj-django-blog.herokuapp.com', '127.0.0.1',]
 CORS_ALLOWED_ORIGINS = [
     'https://afeezgl.github.io',
-    '127.0.0.1',
+    'http://127.0.0.1',
 ]
 
 # Application definition
@@ -85,7 +85,9 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'knox.auth.TokenAuthentication',
-    )
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 12
 }
 
 

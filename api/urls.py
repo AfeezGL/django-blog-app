@@ -1,6 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 from rest_framework.urlpatterns import format_suffix_patterns
+from knox import views as knox_views
 from . import views
 
 router = routers.DefaultRouter()
@@ -12,4 +13,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('login', views.LoginApiView.as_view(), name = 'api login'),
+    path('logout', knox_views.LogoutView.as_view(), name = 'logout'),
 ]
