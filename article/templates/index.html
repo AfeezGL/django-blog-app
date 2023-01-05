@@ -21,7 +21,7 @@
 <section>
     <ul class="pagination">
         {% if page_obj.has_previous %}
-        <li><a href="?page={{ page_obj.previous_page_number }}" class="button">Next</a></li>
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="button">Prev</a></li>
         {% else %}
         <li><span class="button disabled">Prev</span></li>
         {% endif %}
